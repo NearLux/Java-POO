@@ -1,6 +1,5 @@
 package clinicaveterinaria;
-
-public class Consulta {
+public class Consulta extends SessaoDeTratamento {
     //Variáveis de instância...
     private String dataDaConsulta;
     private String nomeDoCliente;
@@ -18,7 +17,6 @@ public class Consulta {
         
         System.out.println("----------------------------------------------------");
         System.out.println("A consulta está marcada para " + dataDaConsulta);
-        System.out.println("----------------------------------------------------");
     }
     
     public void renovarCadastro(String nome, String cpf, String animal, String raca){
@@ -29,24 +27,32 @@ public class Consulta {
         
         System.out.println("----------------------------------------------------");
         System.out.println("Cadastro renovado com sucesso!");
-        System.out.println("----------------------------------------------------");
     }
     
     public void exibirCadastro(){
         System.out.println("----------------------------------------------------");
-        System.out.println("Data da consulta: " + dataDaConsulta);
+        System.out.println("Cadastro");
+        System.out.println("");
         System.out.println("Nome: " + nomeDoCliente);
         System.out.println("CPF: " + CPF);
         System.out.println("Animal: " + Animal);
         System.out.println("Raça: " + Raca);
+    }
+    
+    public void exibirConsulta(){
         System.out.println("----------------------------------------------------");
+        System.out.println("Consulta");
+        System.out.println("");
+        System.out.println("Nome: " + nomeDoCliente);
+        System.out.println("Animal: " + Animal);
+        System.out.println("Exames requeridos: " + Exames);
+        System.out.println("Medico: " + medico);
     }
 
     //Getters and Setters...
     public String getDataDaConsulta() {
         System.out.println("----------------------------------------------------");
         System.out.println("A consulta está marcada para " + dataDaConsulta);
-        System.out.println("----------------------------------------------------");
         return dataDaConsulta;
     }
 
